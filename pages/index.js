@@ -1,65 +1,114 @@
-import Head from 'next/head'
-import styles from '../styles/Home.module.css'
+import Link from 'next/link'
 
-export default function Home() {
+const Homepage = () => {
   return (
-    <div className={styles.container}>
-      <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+    <div>
+      <div className="grid grid-cols-3 gap-1 md:gap-3 lg:gap-6">
+        <img className="rounded-lg shadow-md" src="https://jamonholmgren.com/static/family-2019.jpg" alt="family"/>
+        <img className="rounded-lg shadow-md" src="https://jamonholmgren.com/static/goalie.jpg" alt="game"/>
+        <img className="rounded-lg shadow-md" src="https://jamonholmgren.com/static/stage-2019.jpg" alt="speech"/>
+      </div>
 
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
+      <div className="my-16 mx-auto prose lg:prose-lg">
+        <h2>I've loved software for a very long time.</h2>
 
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.js</code>
+        <p>
+          When my dad brought home a 286 in 1991, I was enthralled. I watched as
+          he painstakingly typed and simultaneously repeated{" "}
+          <code>cd backslash games enter</code> and saw the screen scroll and
+          change. It was mind-blowing to a ten year old.
         </p>
 
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
+        <p>
+          A couple years later, a middle school math teacher gave me a book on
+          BASIC programming, and said she had noticed I liked computers. At home,
+          I discovered that our new 486DX computer had QBasic. I was in heaven.
+        </p>
 
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
+        <p>
+          That has led to a life-long obsession with coding. The journey has taken
+          me from running large excavation equipment to framing houses to 3D CAD
+          design, until I eventually landed on a career in software.
+        </p>
 
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className={styles.card}
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
+        <p>
+          Read more about it in{" "}
+          <Link href="/beginnings">
+            <a>Beginnings</a>
+          </Link>
+          .
+        </p>
 
-          <a
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
-        </div>
-      </main>
+        <hr />
 
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
-        </a>
-      </footer>
+        <p>
+          I’m Jamon Holmgren, a software developer, business owner, husband, and
+          father of four, located near Portland, Oregon, in SW Washington state.
+        </p>
+        <p>
+          I am one of the co-founders of{" "}
+          <a href="https://infinite.red">Infinite Red, Inc.</a>, a web & mobile
+          app design and development studio based out of Portland and San
+          Francisco.
+        </p>
+        <p>
+          Feel free to shoot me an email at{" "}
+          <a href="mailto:jamonholmgren@gmail.com">jamonholmgren@gmail.com</a>. If
+          it's work-related, use{" "}
+          <a href="mailto:jamon@infinite.red">jamon@infinite.red</a>.
+        </p>
+
+        <h3>Or...</h3>
+
+        <ul>
+          <li>
+            Check out our new custom pool deck:{" "}
+            <Link href="/pool-deck">
+              <a>Our Custom Pool Deck</a>
+            </Link>
+          </li>
+          <li>
+            See how I built a home gym:{" "}
+            <Link href="/gym">
+              <a>Building My Home Garage Gym</a>
+            </Link>
+          </li>
+          <li>
+            Check out a cool pathfinding demo I wrote in Elm!{" "}
+            <a href="/static/path.html">Pathfinding Demo</a>
+          </li>
+          <li>
+            Listen to a recent Podcast interview:{" "}
+            <a href="https://devchat.tv/react-native-radio/rnr-128-chain-react-with-jamon-holmgren/">
+              React Native Radio #128 - Chain React with Jamon Holmgren
+            </a>
+          </li>
+          <li>
+            Watch a 5 minute lightning talk I gave at{" "}
+            <a href="https://www.youtube.com/watch?v=DOgT_K5tLxU">ElixirConf</a>{" "}
+            or other{" "}
+            <Link href="/talks">
+              <a>talks</a>
+            </Link>
+            .
+          </li>
+        </ul>
+
+        <hr />
+
+        <p>
+          P.S. I built this website in <a href="https://nextjs.org">Next.js</a>{" "}
+          and I've had a great experience with it.{" "}
+          <a href="https://twitter.com/jamonholmgren/status/1065447628966514688">
+            Upgrading
+          </a>{" "}
+          is super easy. This website is{" "}
+          <a href="https://github.com/jamonholmgren/jamonholmgren">
+            open source on Github!
+          </a>
+        </p>
+      </div>
     </div>
   )
 }
+export default Homepage;
